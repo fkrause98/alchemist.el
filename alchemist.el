@@ -75,7 +75,8 @@
 (require 'alchemist-compile)
 (require 'alchemist-refcard)
 (require 'alchemist-complete)
-(require 'alchemist-company)
+;; It is better to use LSP+company-capf instead.
+;; (require 'alchemist-company)
 (require 'alchemist-macroexpand)
 (require 'alchemist-phoenix)
 
