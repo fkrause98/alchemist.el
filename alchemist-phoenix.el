@@ -75,7 +75,7 @@
 (defun alchemist-phoenix-routes (&optional prefix)
   (interactive)
   "Run the Mix task 'phoenix.routes' and list all available Phoenix routes."
-  (alchemist-mix-execute '("phoenix.routes") prefix))
+  (alchemist-mix-execute '("phx.routes") prefix))
 
 (defun alchemist-phoenix-router ()
   "Open the 'router.ex' file from 'web' directory."
