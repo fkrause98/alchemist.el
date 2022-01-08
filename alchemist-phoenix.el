@@ -37,7 +37,7 @@
 (defun alchemist-phoenix-project-p ()
   "Return non-nil if `default-directory' is inside a Phoenix project."
   (and (alchemist-project-p)
-       (file-directory-p (concat (alchemist-project-root) "web"))))
+       (file-directory-p (concat (alchemist-project-root) "lib/" (alchemist-project-name) "_web"))))
 
 (defun alchemist-phoenix-find-dir (directory)
   (unless (alchemist-phoenix-project-p)
@@ -79,10 +79,9 @@
 
 (defun alchemist-phoenix-router ()
   "Open the 'router.ex' file from 'web' directory."
-  (interactive)
   (unless (alchemist-phoenix-project-p)
     (error "Could not find an Phoenix Mix project root."))
-  (find-file (concat (alchemist-project-root) "web/router.ex")))
+  (find-file (concat (alchemist-project-root) "lib/" (alchemist-project-name) "_web/router.ex")))
 
 (defvar alchemist-phoenix-command-map
   (let ((map (make-sparse-keymap)))
